@@ -11,11 +11,11 @@ Logging is done in a separate thread to avoid slowing down the function that req
 Remember that global functions operate on a previously declared CLog instance of the TLogger class.
 
 * **The GlobalFunctions:**
-	* **LogInit**
+	* **LogInit** Initializes a previously declared instance of the CLog class. Looks for a default TMemo, creates log folders. Called automatically on first attempt to print to the log.
 	* **PrintLn(Const Data : array of Variant):string**
 	* **PrintF(Const Formatting : string; Const Data : array of const):string**
-	* **GetLog(text:string=''):string;**
-	* **GetLog(Value: Variant):string;**
+	* **GetLog(text:string=''):string;** legacy functions for backward compatibility with earlier versions
+	* **GetLog(Value: Variant):string;** legacy functions for backward compatibility with earlier versions
 	* **PrintLog(text:string=''):string;**
 	* **PrintLog(Value: Variant):string;**
 	* **LogClear**
