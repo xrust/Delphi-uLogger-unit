@@ -11,14 +11,14 @@ Logging is done in a separate thread to avoid slowing down the function that req
 Remember that global functions operate on a previously declared CLog instance of the TLogger class.
 
 * **The GlobalFunctions:**
-	* LogInit;
-	* PrintLn(Const Data : array of Variant):string;
-	* PrintF(Const Formatting : string; Const Data : array of const):string;
-	* GetLog(text:string=''):string;overload;
-	* GetLog(Value: Variant):string;overload;
-	* PrintLog(text:string=''):string;overload;
-	* PrintLog(Value: Variant):string;overload;
-	* LogClear;
-	* LogJumpToEnd;
-	* LogSetCapasity(CountOfLines:Integer);
+	* **LogInit**
+	* **PrintLn(Const Data : array of Variant):string**
+	* **PrintF(Const Formatting : string; Const Data : array of const):string**
+	* **GetLog(text:string=''):string;**
+	* **GetLog(Value: Variant):string;**
+	* **PrintLog(text:string=''):string;**
+	* **PrintLog(Value: Variant):string;**
+	* **LogClear**
+	* **LogJumpToEnd**
+	* **LogSetCapasity(CountOfLines:Integer)**
 	
