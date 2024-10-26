@@ -46,6 +46,8 @@ function    PrintLn(Const Data : array of Variant):string;
 function    PrintF(Const Formatting : string; Const Data : array of const):string;
 function    GetLog(text:string=''):string;overload;
 function    GetLog(Value: Variant):string;overload;
+function    PrintLog(text:string=''):string;overload;
+function    PrintLog(Value: Variant):string;overload;
 procedure   LogClear;
 procedure   LogJumpToEnd;
 procedure   LogSetCapasity(CountOfLines:Integer);
@@ -85,6 +87,18 @@ function    PrintF(Const Formatting : string; Const Data : array of const):strin
 begin
     if( LogComp = nil )then LogInit;
     if( CLog <> nil )then Result:=CLog.PrintF(Formatting,Data) else Result:='Error ! Clog Not Initialised!';
+end;
+//+------------------------------------------------------------------+
+function PrintLog(text:string=''):string;
+begin
+    if( LogComp = nil )then LogInit;
+    if( CLog <> nil )then Result:=CLog.Print(text) else Result:='Error ! Clog Not Initialised!';
+end;
+//+------------------------------------------------------------------+
+function PrintLog(Value: Variant):string;overload;
+begin
+    if( LogComp = nil )then LogInit;
+    if( CLog <> nil )then Result:=CLog.Print(Value) else Result:='Error ! Clog Not Initialised!';
 end;
 //+------------------------------------------------------------------+
 function GetLog(text:string=''):string;
