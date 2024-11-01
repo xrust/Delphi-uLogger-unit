@@ -8,11 +8,7 @@ uses
 
 type
   TForm1 = class(TForm)
-    Panel1: TPanel;
     Log: TMemo;
-    edtInput: TEdit;
-    btnClear: TButton;
-    btnPrint: TButton;
     procedure FormCreate(Sender: TObject);
     procedure btnClearClick(Sender: TObject);
     procedure btnPrintClick(Sender: TObject);
@@ -29,7 +25,11 @@ implementation {$R *.dfm}
 //-----------------------------------------------------------------------------+
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-    //
+    GetLog('Hello World');
+    GetLog(2024);
+    GetLog(127.236);
+    PrintLn(['string : ','Hello world','; Integer : ',5,'; Double : ',123.456]);
+    PrintF('%s; %d; %f;',['Hello World',5,123.456]);
 end;
 //-----------------------------------------------------------------------------+
 procedure TForm1.btnClearClick(Sender: TObject);

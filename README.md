@@ -21,4 +21,4 @@ Remember that global functions operate on a previously declared CLog instance of
 	* **LogClear**
 	* **LogJumpToEnd**
 	* **LogSetCapasity(CountOfLines:Integer)**
-	
+
